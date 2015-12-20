@@ -22,10 +22,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+# capybara is an integration testing tool for rack based web app. It simulates how a user would interact with a website.
+gem 'capybara', '~> 2.5'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+# bcrypt designed by the open BSD project for hashing pw and providing a simple wrapper for safely handling pw
+gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
