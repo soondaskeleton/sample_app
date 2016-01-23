@@ -11,18 +11,14 @@ def remember(user)
   cookies.permanent[:remember_token] = user.remember_token
 end
 
-#returns true if the given user is the current user
-def current_user?(user)
-  user == current_user
-end
   # this returns the current logged in user (if there are any)
   def current_user
     if (user_id = session[:user_id])
     @current_user ||= User.find_by(id: user_id)
   elsif (user_id = cookies.signed[:user_id])
-  raise # the tests still pass, so this branc is currently untested 
+  #raise # the tests still pass, so this branc is currently untested 
     user = User.find_by(id: user_id)
-    if user && user.authenticated?(cookies[:remember_token])
+    if user && user.authenticated?(:remember, cookies[:remember_token])
       log_in user
       @current_user = user
     end

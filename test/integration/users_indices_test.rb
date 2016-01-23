@@ -30,7 +30,3 @@ class UsersIndicesTest < ActionDispatch::IntegrationTest
     assert_select 'a', text: 'delete', count: 0
   end
 end
-
-    User.pagination(page: 1).each do |user|
-    end
-  end
