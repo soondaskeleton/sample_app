@@ -225,7 +225,7 @@ DEPENDENCIES
   bcrypt (~> 3.1, >= 3.1.10)
   better_error_message (~> 3.0)
   bootstrap-sass (~> 3.3, >= 3.3.6)
-  bundler (~> 1.11.2)
+  bundler (~> 1.11, >= 1.11.2)
   byebug
   capybara (~> 2.5)
   coffee-rails (~> 4.1.0)
