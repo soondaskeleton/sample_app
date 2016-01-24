@@ -32,7 +32,10 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 # ruby client for the heroku api --- heroku add on 
 gem 'heroku-api', '~> 0.4.0'
 # gem 'unicorn'w
-gem 'bundler', '~> 1.11', '>= 1.11.2'
+gem 'better_error_message', '~> 3.0'
+#automatically updates and installs bundler when needed
+gem 'guard-bundler', '~> 2.1'
+gem 'bundler', '~> 1.11.2'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
