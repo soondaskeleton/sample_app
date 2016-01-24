@@ -29,6 +29,8 @@ gem 'capybara', '~> 2.5'
 # bcrypt designed by the open BSD project for hashing pw and providing a simple wrapper for safely handling pw
 gem 'bcrypt', '~> 3.1', '>= 3.1.10'
 # Use Unicorn as the app server
+# ruby client for the heroku api --- heroku add on 
+gem 'heroku-api', '~> 0.4.0'
 # gem 'unicorn'w
 gem 'bundler', '~> 1.11', '>= 1.11.2'
 gem 'will_paginate', '~> 3.0', '>= 3.0.7'

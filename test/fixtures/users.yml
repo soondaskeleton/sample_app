@@ -9,7 +9,7 @@ soonie:
   activated_at: <%= Time.zone.now %>
 
 pita:
-  name: Pita
+  name: Pitaf
   email: Pitata@example.com
   password_digest: <%= User.digest('password')
   activated: true
@@ -37,4 +37,4 @@ malory:
     activated: true
     activated_at: <%= Time.zone.now %>
     <% end %>
-    
+  

@@ -1,5 +1,4 @@
-require 'rails_helper'
-
+require 'test_helper'
 class UsersIndicesTest < ActionDispatch::IntegrationTest
 
   def setup
