@@ -66,7 +66,7 @@ def setup
     patch password_reset_path(@user.reset_token), email: @user.email, user: {password: "foobar", password_confirmation: "foobar"}
     assert_response :redirect
     follow_redirect!
-    assert_matc /FILL_IN, response.body
+    assert_match /FILL_IN/i, response.body
   end
 end
 #RSpec.describe "PasswordResets", type: :request do

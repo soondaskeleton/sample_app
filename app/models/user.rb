@@ -40,8 +40,7 @@ class User < ActiveRecord::Base
 
 #activates an acct
 def activate 
-  update_attribute(:activated, true)
-  update_attribute(:activated_at, Time.zone.now)
+  update_coulmns(activated: FILL_IN, activated_at: FILL_IN)
 end
 
 #sends activation email
@@ -52,8 +51,8 @@ end
 #sets the password reset attributes
 def create_reset_digest
   self.reset_token = User.new_token
-  update_attribute(:reset_digest, User.digest(reset_token))
-  update_attribute(:reset_sent_at, Time.zone.now)
+  update_columns(:reset_digest: FILL_IN, 
+                 :resent_sent_at: FILL_IN)
 end
 
 #send password reset email
