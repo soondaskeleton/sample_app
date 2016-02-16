@@ -1,0 +1,1 @@
+static_pages__spec.rb

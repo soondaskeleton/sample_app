@@ -12,7 +12,8 @@ def remember(user)
 end
 
   # this returns the current logged in user (if there are any)
-  def current_user
+  def current_user?(user)
+    user == current_user
     if (user_id = session[:user_id])
     @current_user ||= User.find_by(id: user_id)
   elsif (user_id = cookies.signed[:user_id])
@@ -24,6 +25,13 @@ end
     end
   end
 end
+
+  def signed_in_user
+    unless signed_in?
+      store_location
+      redirect_to signin_url, notice: "Please sign in."
+    end
+  end
 
   #this returns true if the user is logged in, false otherwise
   def logged_in?

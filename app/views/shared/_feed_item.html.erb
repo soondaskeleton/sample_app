@@ -1,0 +1,16 @@
+<li id="<% if @feed_items.any? %>">
+<%= link_to gravtar_for(feed_item.user), feed_item.user %>
+<span class="user">
+  <%= link_to feed_item.user.name, feed_item.user %>
+</span>
+<span class="content"><%= feed_item.content %></span>
+<span class="timestamp">
+  Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+</span>
+</li>
+
+<ol class="microposts">
+  <%= render partial: 'shared/feed_item', collection: @feed_items %>
+</ol>
+<%= will_paginate @feed_items %>
+<% end %>
